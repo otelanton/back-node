@@ -30,6 +30,10 @@ const generateId = () => {
   return maxId + 1
 }
 
+app.get('/api/notes', (req, res) => {
+  res.json(notes)
+})
+
 app.post('/api/notes', (request, response) => {
   const body = request.body
 
